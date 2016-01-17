@@ -1,0 +1,26 @@
+{
+  "name": "georeactor-cli",
+  "version": "0.5.0",
+  "description": "Generate maps using Georeactor",
+  "main": "georeactor.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "bin": {
+    "georeactor": "georeactor.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Georeactor/georeactor-cli.git"
+  },
+  "author": "Georeactor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Georeactor/georeactor-cli/issues"
+  },
+  "homepage": "http://georeactor.com",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "to-topojson": "^1.0.2"
+  }
+}
