@@ -3,6 +3,7 @@
 const fs = require('fs');
 
 const program = require('commander');
+
 const toTopoJSON = require('to-topojson').convertFile;
 const knownToTopoJSON = require('to-topojson').convertFileWithFormat;
 
@@ -12,8 +13,9 @@ var mapConfig = {
 };
 
 program
-  .version('0.5.0')
+  .version('0.6.0')
   .arguments('<sourceFile>')
+  .option('-l --label', 'include label', /(.*)/, false)
   .option('-f --format <format>', 'format of source file', /^(GeoJSON|TopoJSON|SHP|KML)$/i, '')
   .option('-m --map <mapType>', '(Google or Leaflet)', /^(google|leaflet)$/i, 'leaflet')
   .option('-d --div <divID>', 'id of map container', /(.*)/, 'map')
@@ -30,6 +32,7 @@ if (!program.args.length) {
       console.log(JSON.stringify(err));
       return;
     }
+
     mapConfig.map = program.map;
     mapConfig.div = program.div;
     mapConfig.data.push('mapdata.topojson');
@@ -37,9 +40,9 @@ if (!program.args.length) {
   }
 
   if (program.format) {
-    knownToTopoJSON(sourceFile, program.format, 'mapdata.topojson', next, console.log);
+    knownToTopoJSON(sourceFile, program.format, 'mapdata.topojson', next, console.log, program.label);
   } else {
-    toTopoJSON(sourceFile, 'mapdata.topojson', next, console.log);
+    toTopoJSON(sourceFile, 'mapdata.topojson', next, console.log, program.label);
   }
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "georeactor-cli",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Generate maps using Georeactor",
   "main": "georeactor.js",
   "scripts": {
@@ -21,6 +21,6 @@
   "homepage": "http://georeactor.com",
   "dependencies": {
     "commander": "^2.9.0",
-    "to-topojson": "^1.0.2"
+    "to-topojson": "^1.1.2"
   }
 }

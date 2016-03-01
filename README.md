@@ -28,12 +28,13 @@ georeactor borders.geojson
 Very useful options to make different kinds of maps!
 
 ```bash
-georeactor borders.json -f GeoJSON -m google -d gmaps
+georeactor borders.json -f GeoJSON -m google -d gmaps -l
 ```
 
 * -f: format of source file (GeoJSON, TopoJSON, KML, and SHP supported)
 * -m: map type (Google and Leaflet supported, defaults to Leaflet)
 * -d: div id (defaults to "map")
+* -l: adds a label file (centroids of polygons and multipolygons)
 
 ## License
 
