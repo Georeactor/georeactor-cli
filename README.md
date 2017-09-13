@@ -1,5 +1,7 @@
 # georeactor-cli
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Georeactor/georeactor-cli.svg)](https://greenkeeper.io/)
+
 Georeactor is an experimental interface for creating interactive maps.
 
 This is the command-line version
